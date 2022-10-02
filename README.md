@@ -1,6 +1,20 @@
+# Timothy Boie's Mental Health App:
+
+About: combines a description with a formula to produce a speciallly tailored image.
+
+- install flask `pip install Flask`
+- run server with `flask run`
+- `App.py` is the server file and it calls `demo.py`
+- `/templates/home.html` is the web file
+- make sure the fetch address in `home.html` matches that returned by `flask run`
+- image file saves as `output.png` in root directory for now
+
+- EXTRA: image color pallete generation with imgColors.js (port to python to use?)
+
 # stable_diffusion.openvino
 
 Implementation of Text-To-Image generation using Stable Diffusion on Intel CPU.
+
 <p align="center">
   <img src="data/title.png"/>
 </p>
@@ -11,12 +25,11 @@ When we started this project, it was just a tiny proof of concept that you can w
 But, due we get a lot of feedback from you, we decided to make this project something more than a tiny script.
 Currently, we work on the new version of our project, so we can respond to your issues and pool requests with delay.
 
-
 ## Requirements
 
-* Linux, Windows, MacOS
-* Python 3.8.+
-* CPU compatible with OpenVINO.
+- Linux, Windows, MacOS
+- Python 3.8.+
+- CPU compatible with OpenVINO.
 
 ## Install requirements
 
@@ -52,26 +65,30 @@ optional arguments:
   --strength STRENGTH   how strong the initial image should be noised [0.0, 1.0]
   --mask MASK           mask of the region to inpaint on the initial image
   --output OUTPUT       output image name
-  ```
+```
 
 ## Examples
 
 ### Example Text-To-Image
+
 ```bash
 python demo.py --prompt "Street-art painting of Emilia Clarke in style of Banksy, photorealism"
 ```
 
 ### Example Image-To-Image
+
 ```bash
 python demo.py --prompt "Photo of Emilia Clarke with a bright red hair" --init-image ./data/input.png --strength 0.5
 ```
 
 ### Example Inpainting
+
 ```bash
 python demo.py --prompt "Photo of Emilia Clarke with a bright red hair" --init-image ./data/input.png --mask ./data/mask.png --strength 0.5
 ```
 
 ### Example web demo
+
 <p align="center">
   <img src="data/demo_web.png"/>
 </p>
@@ -84,19 +101,19 @@ streamlit run demo_web.py
 
 ## Performance
 
-| CPU                                                   | Time per iter | Total time |
-|-------------------------------------------------------|---------------|------------|
-| AMD Ryzen Threadripper 1900X                          | 5.34 s/it     | 2.58 min   |
-| Intel(R) Core(TM) i7-4790K  @ 4.00GHz                 | 10.1 s/it     | 5.39 min   |
-| Intel(R) Core(TM) i5-8279U                            | 7.4 s/it      | 3.59 min   |
-| Intel(R) Core(TM) i7-1165G7 @ 2.80GHz                 | 7.4 s/it      | 3.59 min   |
-| Intel(R) Core(TM) i7-11800H @ 2.30GHz (16 threads)    | 2.9 s/it      | 1.54 min   |
-| Intel(R) Xeon(R) Gold 6154 CPU @ 3.00GHz              | 1 s/it        | 33 s       |
+| CPU                                                | Time per iter | Total time |
+| -------------------------------------------------- | ------------- | ---------- |
+| AMD Ryzen Threadripper 1900X                       | 5.34 s/it     | 2.58 min   |
+| Intel(R) Core(TM) i7-4790K @ 4.00GHz               | 10.1 s/it     | 5.39 min   |
+| Intel(R) Core(TM) i5-8279U                         | 7.4 s/it      | 3.59 min   |
+| Intel(R) Core(TM) i7-1165G7 @ 2.80GHz              | 7.4 s/it      | 3.59 min   |
+| Intel(R) Core(TM) i7-11800H @ 2.30GHz (16 threads) | 2.9 s/it      | 1.54 min   |
+| Intel(R) Xeon(R) Gold 6154 CPU @ 3.00GHz           | 1 s/it        | 33 s       |
 
 ## Acknowledgements
 
-* Original implementation of Stable Diffusion: https://github.com/CompVis/stable-diffusion
-* diffusers library: https://github.com/huggingface/diffusers
+- Original implementation of Stable Diffusion: https://github.com/CompVis/stable-diffusion
+- diffusers library: https://github.com/huggingface/diffusers
 
 ## Disclaimer
 

@@ -47,8 +47,9 @@ def run_script():
 
     print(phrase)
 
+    # call main func in demo.py with "prompt" arg
     demo.main({"prompt": phrase})
-    return send_file("output.png", mimetype='image/png')
+    return send_file("output/output.png", mimetype='image/png')
 
 
 if __name__ == "__main__":

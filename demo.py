@@ -32,7 +32,7 @@ def main(args):
         guidance_scale=7.5,
         eta=0.0
     )
-    cv2.imwrite("output.png", image)
+    cv2.imwrite("output/output.png", image)
 
 
 if __name__ == "__main__":

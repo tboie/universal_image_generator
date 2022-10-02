@@ -7,7 +7,7 @@ About: combines a description with a formula to produce a speciallly tailored im
 - `App.py` is the server file and it calls `demo.py`
 - `/templates/home.html` is the web file
 - make sure the fetch address in `home.html` matches that returned by `flask run`
-- image file saves as `output.png` in root directory for now
+- image file saved to `/output/output.png`
 
 - EXTRA: image color pallete generation with imgColors.js (port to python to use?)
 

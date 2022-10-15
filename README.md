@@ -1,10 +1,10 @@
-# Timothy Boie's Mental Health App:
+# Timothy Boie's Universal AI App:
 
-About: combines a description with a formula to produce a speciallly tailored image.
-
+- install stable diffusion from section below
 - install flask `pip install Flask`
 - run server with `flask run`
-- `App.py` is the server file and it calls `demo.py`
+
+- `app.py` is the server file and calls `demo.py` with prompt string as argument
 - `/templates/home.html` is the web file
 - make sure the fetch address in `home.html` matches that returned by `flask run`
 - image file saved to `/output/output.png`

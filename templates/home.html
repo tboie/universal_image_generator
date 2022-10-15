@@ -23,32 +23,21 @@
       div {
         width: 100%;
         height: 100%;
-        max-width: 500px;
+        max-width: 512px;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        border: 1px solid black;
       }
 
       h1 {
-        height: 5%;
+        margin: 0.25rem 0;
         width: 100%;
         font-size: 2rem;
         text-align: center;
       }
 
-      #btn {
-        width: 100%;
-        height: 100px;
-        background-color: gray;
-        color: lightgray;
-        font-size: 2rem;
-        padding: 0;
-      }
-
       #image {
-        max-width: 100%;
         width: 100%;
         object-fit: cover;
         border: 0;
@@ -57,18 +46,27 @@
       #textarea {
         resize: none;
         width: 100%;
-        height: 25%;
         font-size: 1.5rem;
         overflow: hidden;
         background-color: lightgray;
         border: 0;
+        flex: 1;
+      }
+
+      #btn {
+        width: 100%;
+        height: 50px;
+        background-color: gray;
+        color: lightgray;
+        font-size: 2rem;
+        padding: 0;
       }
     </style>
   </head>
   <body>
     <div>
       <h1>Describe Your Vibe</h1>
-      <img id="image" />
+      <img id="image" src="/static/placeholder.png" />
       <textarea id="textarea" placeholder="Please type here."></textarea>
       <button id="btn">Meditate</button>
     </div>
@@ -77,13 +75,14 @@
       window.onload = function () {
         const btn = document.getElementById("btn");
         btn.addEventListener("click", (e) => {
-          // only letters, spaces, numbers, question marks, exclamation marks
+          // only letters, spaces, numbers, question marks, exclamation marks, dashes
           const text = document
             .getElementById("textarea")
-            .value.replace(/[^\w\s!?]/g, "");
+            .value.replace(/[^\w\s\-!?]/g, "");
 
           document.getElementById("btn").disabled = true;
-          document.querySelector("#image").src = "";
+          document.getElementById("btn").innerText = "Meditating";
+          document.querySelector("#image").src = "/static/placeholder.png";
 
           const imageUrl = "http://127.0.0.1:5000/gen?phrase=" + text;
           fetch(imageUrl)
@@ -93,6 +92,7 @@
                 URL.createObjectURL(imageBlob);
               document.getElementById("textarea").value = "";
               document.getElementById("btn").disabled = false;
+              document.getElementById("btn").innerText = "Meditate";
             });
         });
       };

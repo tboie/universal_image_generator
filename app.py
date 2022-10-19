@@ -14,6 +14,9 @@ plants = plants["plants"]
 f_landforms = open('json/landforms.json')
 landforms = json.load(f_landforms)
 
+f_minerals = open('json/minerals.json')
+minerals = json.load(f_minerals)
+
 # load Flask library
 app = Flask(__name__)
 
@@ -36,6 +39,8 @@ def run_script():
         ["water", "wood", "fire", "earth", "metal", "air", "wind", "sunlight", "glass", "fungus", "sponge",
          "energy", "lightning", "space", "astro", "cosmos", "lava", "smoke", "oceanic", "underwater", "deepsea", "aquatic"])
 
+    mineral = random.choice(minerals)
+
     pattern = random.choice(["symmetries", "trees", "spirals", "meanders",
                             "waves", "foams", "tessellations", "cracks", "stripes"])
 
@@ -57,13 +62,10 @@ def run_script():
                                 "house", "religious building", "ritual building", "shrine", "tomb", "grave", "graveyard",
                                 "refuse pit", "cathedral"])
 
-    # TODO: add minerals
-    # https://en.wikipedia.org/wiki/List_of_minerals
-
     key = "universal mystical magical place of epic ultimate elite supreme technological archeological natural creatures living being architectural monumental wisdom inspiration realistic imagination engineering instruments symbolism sculpture genius artistic energy motion mechanical intellect creation"
 
     prompt = key + " " + element + " " + pattern + \
-        " " + geo + " " + plant_species + " " + \
+        " " + geo + " " + " " + mineral + " " + plant_species + " " + \
         animal_species + " " + structure1 + " " + structure2 + " " + \
         phrase + " three-dimensional form 3d render painting fractal spirit"
 

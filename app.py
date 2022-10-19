@@ -60,7 +60,7 @@ def run_script():
     # TODO: add minerals
     # https://en.wikipedia.org/wiki/List_of_minerals
 
-    key = "universal mystical magical place of epic ultimate elite supreme technological archeological natural living being architectural monumental wisdom inspiration realistic imagination engineering instruments symbolism sculpture genius artistic energy mechanical intellect motion abstract creation"
+    key = "universal mystical magical place of epic ultimate elite supreme technological archeological natural creatures living being architectural monumental wisdom inspiration realistic imagination engineering instruments symbolism sculpture genius artistic energy motion mechanical intellect creation"
 
     prompt = key + " " + element + " " + pattern + \
         " " + geo + " " + plant_species + " " + \

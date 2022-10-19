@@ -57,6 +57,9 @@ def run_script():
                                 "house", "religious building", "ritual building", "shrine", "tomb", "grave", "graveyard",
                                 "refuse pit", "cathedral"])
 
+    # TODO: add minerals
+    # https://en.wikipedia.org/wiki/List_of_minerals
+
     key = "universal mystical magical place of epic ultimate elite supreme technological archeological natural living being architectural monumental wisdom inspiration realistic imagination engineering instruments symbolism sculpture genius artistic energy mechanical intellect motion abstract creation"
 
     prompt = key + " " + element + " " + pattern + \

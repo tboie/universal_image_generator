@@ -57,7 +57,7 @@ def run_script():
                                 "house", "religious building", "ritual building", "shrine", "tomb", "grave", "graveyard",
                                 "refuse pit", "cathedral"])
 
-    key = "universal mystical magical place of epic ultimate elite supreme technological archeological natural living being architectural monumental wisdom inspiration realistic imagination engineering instruments symbolism sculpture genius artistic mechanical intellect motion abstract creation"
+    key = "universal mystical magical place of epic ultimate elite supreme technological archeological natural living being architectural monumental wisdom inspiration realistic imagination engineering instruments symbolism sculpture genius artistic energy mechanical intellect motion abstract creation"
 
     prompt = key + " " + element + " " + pattern + \
         " " + geo + " " + plant_species + " " + \

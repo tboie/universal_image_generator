@@ -20,6 +20,9 @@ minerals = json.load(f_minerals)
 f_sea_species = open('json/sea_species.json')
 sea_species = json.load(f_sea_species)
 
+f_animals = open('json/animals.json')
+animals = json.load(f_animals)
+
 # load Flask library
 app = Flask(__name__)
 
@@ -55,6 +58,8 @@ def run_script():
                                     "bird", "parasite", "parasite host", "worm", "helminth", "plankton", "microorganism",
                                     "protozoan", "nematoad", "roundworm"])
 
+    animal = random.choice(animals)
+
     sea_species = random.choice(sea_species)
 
     structure1 = random.choice(["twin city", "megacity", "megalopolis", "smart city",
@@ -74,7 +79,7 @@ def run_script():
     key = key + " " + " " .join(key_desc)
 
     forms = [geo, element, mineral, pattern, plant_species,
-             animal_species, sea_species, structure1, structure2]
+             animal_species, animal, sea_species, structure1, structure2]
     random.shuffle(forms)
 
     process = "creation three-dimensional form 3d render painting fractal spirit"

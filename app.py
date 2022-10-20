@@ -84,7 +84,7 @@ def run_script():
              animal_species, animal, sea_species1, structure1, structure2]
     random.shuffle(forms)
 
-    process = "creation three-dimensional form 3d render painting fractal spirit"
+    process = "three-dimensional form 3d render painting fractal spirit"
 
     prompt = key + " " + " ".join(forms) + " " + phrase + " " + process
 

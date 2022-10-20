@@ -62,15 +62,15 @@ def run_script():
                                 "house", "religious building", "ritual building", "shrine", "tomb", "grave", "graveyard",
                                 "refuse pit", "cathedral"])
 
-    adjectives = "universal mystical magical place of epic ultimate ultra elite supreme unique technological archeological natural creatures living being architectural monumental wisdom inspiration realistic imagination engineering instruments symbolism sculpture raw genius artistic energy motion mechanical intellect creation"
+    key = "universal mystical magical place of epic ultimate ultra elite supreme unique technological archeological natural creatures living being architectural monumental wisdom inspiration realistic imagination engineering instruments symbolism sculpture raw genius artistic energy motion mechanical intellect creation"
 
     forms = [geo, element, mineral, pattern, plant_species,
              animal_species, structure1, structure2]
     random.shuffle(forms)
 
-    setting = "three-dimensional form 3d render painting fractal spirit"
+    process = "three-dimensional form 3d render painting fractal spirit"
 
-    prompt = adjectives + " " + " ".join(forms) + " " + phrase + " " + setting
+    prompt = key + " " + " ".join(forms) + " " + phrase + " " + process
 
     # remove multiple spaces and remove commas
     prompt = re.sub(" +", " ", prompt).replace(",", "").lower()

@@ -62,7 +62,11 @@ def run_script():
                                 "house", "religious building", "ritual building", "shrine", "tomb", "grave", "graveyard",
                                 "refuse pit", "cathedral"])
 
-    key = "universal mystical magical place of epic ultimate ultra elite supreme unique technological archeological natural creatures living being architectural monumental wisdom inspiration realistic imagination engineering instruments symbolism sculpture raw genius artistic energy motion mechanical intellect creation"
+    key = "universal mystical magical place of"
+    key_desc = "epic ultimate ultra elite supreme unique technological archeological natural creatures living being architectural monumental wisdom inspiration realistic imagination engineering instruments symbolism sculpture raw genius artistic energy motion mechanical intellect"
+    key_desc = key_desc.split(" ")
+    random.shuffle(key_desc)
+    key = key + " " + " " .join(key_desc) + " " + "creation"
 
     forms = [geo, element, mineral, pattern, plant_species,
              animal_species, structure1, structure2]

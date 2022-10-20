@@ -52,6 +52,8 @@ def run_script():
 
     plant_species = random.choice(plants)["species"]
 
+    plant_name = random.choice(plants)["name"]
+
     animal_species = random.choice(["mite", "tick", "arthopod", "crustacean", "milli", "centipede", "spider", "scorpion", "pseudoscorpion", "harvestmen", "arachnid", "insect",
                                     "beetle", "butterfly", "bee", "ant", "grasshopper", "amphibian", "reptile", "frog", "toad", "salamander", "newt", "caecilian",
                                     "turtle", "tortois", "lizard", "snake", "fish", "mollusk", "shell", "cephalopod", "mammal", "primate",
@@ -78,7 +80,7 @@ def run_script():
     random.shuffle(key_desc)
     key = key + " " + " " .join(key_desc)
 
-    forms = [geo, element, mineral, pattern, plant_species,
+    forms = [geo, element, mineral, pattern, plant_species, plant_name,
              animal_species, animal, sea_species1, structure1, structure2]
     random.shuffle(forms)
 

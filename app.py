@@ -36,8 +36,8 @@ def run_script():
     geo = random.choice(landforms)
 
     element = random.choice(
-        ["water", "wood", "fire", "earth", "metal", "air", "wind", "sunlight", "glass", "fungus", "sponge",
-         "energy", "lightning", "space", "astro", "cosmos", "lava", "smoke", "oceanic", "underwater", "deepsea", "aquatic"])
+        ["water", "wood", "fire", "earth", "metal", "air", "wind", "sunlight", "glass", "fungus", "sponge", "laser",
+         "lightning", "space", "astro", "cosmos", "lava", "smoke", "oceanic", "underwater", "deepsea", "aquatic"])
 
     mineral = random.choice(minerals)
 
@@ -62,7 +62,7 @@ def run_script():
                                 "house", "religious building", "ritual building", "shrine", "tomb", "grave", "graveyard",
                                 "refuse pit", "cathedral"])
 
-    key_prefix = "universal mystical magical place of epic ultimate elite supreme technological archeological natural creatures living being architectural monumental wisdom inspiration realistic imagination engineering instruments symbolism sculpture genius artistic energy motion mechanical intellect creation"
+    key_prefix = "universal mystical magical place of epic ultimate ultra elite supreme technological archeological natural creatures living being architectural monumental wisdom inspiration realistic imagination engineering instruments symbolism sculpture raw genius artistic energy motion mechanical intellect creation"
     key_suffix = "three-dimensional form 3d render painting fractal spirit"
 
     prompt = key_prefix + " " + element + " " + pattern + \

@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
     />
-    <title>Our Phunky HTML Page</title>
+    <title>Universal AI Images</title>
     <style>
       * {
         box-sizing: border-box;
@@ -33,7 +33,7 @@
       h1 {
         margin: 0.25rem 0;
         width: 100%;
-        font-size: 2rem;
+        font-size: 1.75rem;
         text-align: center;
       }
 
@@ -61,13 +61,24 @@
         font-size: 2rem;
         padding: 0;
       }
+
+      #loading {
+        position: absolute;
+        left: 0;
+        top: 250px;
+        width: 100%;
+        text-align: center;
+        font-size: 1.5rem;
+        display: none;
+      }
     </style>
   </head>
   <body>
     <div>
       <h1>Describe Your Vibe</h1>
       <img id="image" src="/static/placeholder.png" />
-      <textarea id="textarea" placeholder="Please type here."></textarea>
+      <span id="loading">Generating Image...</span>
+      <textarea id="textarea" placeholder="Please type here"></textarea>
       <button id="btn">Meditate</button>
     </div>
 
@@ -75,24 +86,32 @@
       window.onload = function () {
         const btn = document.getElementById("btn");
         btn.addEventListener("click", (e) => {
+          document.getElementById("loading").style.display = "block";
+          document.getElementById("btn").disabled = true;
+          document.getElementById("textarea").disabled = true;
+          document.getElementById("textarea").placeholder = "";
+          document.getElementById("btn").innerText = "Meditating";
+          document.getElementById("image").src = "/static/placeholder.png";
+
           // only letters, spaces, numbers, question marks, exclamation marks, dashes
           const text = document
             .getElementById("textarea")
             .value.replace(/[^\w\s\-!?]/g, "");
-
-          document.getElementById("btn").disabled = true;
-          document.getElementById("btn").innerText = "Meditating";
-          document.querySelector("#image").src = "/static/placeholder.png";
-
           const imageUrl = "http://127.0.0.1:5000/gen?phrase=" + text;
+
           fetch(imageUrl)
             .then((response) => response.blob())
             .then((imageBlob) => {
-              document.querySelector("#image").src =
-                URL.createObjectURL(imageBlob);
+              document.getElementById("loading").style.display = "none";
+              document.getElementById("btn").disabled = false;
+              document.getElementById("textarea").disabled = false;
+              document.getElementById("textarea").placeholder =
+                "Please type here";
               document.getElementById("textarea").value = "";
               document.getElementById("btn").disabled = false;
               document.getElementById("btn").innerText = "Meditate";
+              document.querySelector("#image").src =
+                URL.createObjectURL(imageBlob);
             });
         });
       };

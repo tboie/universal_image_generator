@@ -62,12 +62,13 @@ def run_script():
                                 "house", "religious building", "ritual building", "shrine", "tomb", "grave", "graveyard",
                                 "refuse pit", "cathedral"])
 
-    key = "universal mystical magical place of epic ultimate elite supreme technological archeological natural creatures living being architectural monumental wisdom inspiration realistic imagination engineering instruments symbolism sculpture genius artistic energy motion mechanical intellect creation"
+    key_prefix = "universal mystical magical place of epic ultimate elite supreme technological archeological natural creatures living being architectural monumental wisdom inspiration realistic imagination engineering instruments symbolism sculpture genius artistic energy motion mechanical intellect creation"
+    key_suffix = "three-dimensional form 3d render painting fractal spirit"
 
-    prompt = key + " " + element + " " + pattern + \
+    prompt = key_prefix + " " + element + " " + pattern + \
         " " + geo + " " + mineral + " " + plant_species + " " + \
         animal_species + " " + structure1 + " " + structure2 + " " + \
-        phrase + " three-dimensional form 3d render painting fractal spirit"
+        phrase + " " + key_suffix
 
     # remove multiple spaces and remove commas
     prompt = re.sub(" +", " ", prompt).replace(",", "").lower()

@@ -17,6 +17,9 @@ landforms = json.load(f_landforms)
 f_minerals = open('json/minerals.json')
 minerals = json.load(f_minerals)
 
+f_sea_species = open('json/sea_species.json')
+sea_species = json.load(f_sea_species)
+
 # load Flask library
 app = Flask(__name__)
 
@@ -52,13 +55,15 @@ def run_script():
                                     "bird", "parasite", "parasite host", "worm", "helminth", "plankton", "microorganism",
                                     "protozoan", "nematoad", "roundworm"])
 
+    sea_species = random.choice(sea_species)
+
     structure1 = random.choice(["twin city", "megacity", "megalopolis", "smart city",
-                               "metro city", "garden city", "conurbation", "metropolis",
+                                "metro city", "garden city", "conurbation", "metropolis",
                                 "municipality", "cosmopolitan city", "city state", "intermediary city",
                                 "global city", "gateway city", "urban hub", "power city", "neighborhood", "town", "cityscape"])
 
     structure2 = random.choice(["factory", "church", "hut", "religious building",
-                               "skyscraper", "palace", "pyramid", "mansion",
+                                "skyscraper", "palace", "pyramid", "mansion",
                                 "house", "religious building", "ritual building", "shrine", "tomb", "grave", "graveyard",
                                 "refuse pit", "cathedral"])
 
@@ -66,13 +71,13 @@ def run_script():
     key_desc = "epic ultimate ultra elite supreme unique technological archeological natural creatures living being architectural monumental wisdom inspiration realistic imagination engineering instruments symbolism sculpture raw genius artistic energy motion mechanical intellect"
     key_desc = key_desc.split(" ")
     random.shuffle(key_desc)
-    key = key + " " + " " .join(key_desc) + " " + "creation"
+    key = key + " " + " " .join(key_desc)
 
     forms = [geo, element, mineral, pattern, plant_species,
-             animal_species, structure1, structure2]
+             animal_species, sea_species, structure1, structure2]
     random.shuffle(forms)
 
-    process = "three-dimensional form 3d render painting fractal spirit"
+    process = "creation three-dimensional form 3d render painting fractal spirit"
 
     prompt = key + " " + " ".join(forms) + " " + phrase + " " + process
 

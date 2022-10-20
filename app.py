@@ -65,7 +65,7 @@ def run_script():
     key = "universal mystical magical place of epic ultimate elite supreme technological archeological natural creatures living being architectural monumental wisdom inspiration realistic imagination engineering instruments symbolism sculpture genius artistic energy motion mechanical intellect creation"
 
     prompt = key + " " + element + " " + pattern + \
-        " " + geo + " " + " " + mineral + " " + plant_species + " " + \
+        " " + geo + " " + mineral + " " + plant_species + " " + \
         animal_species + " " + structure1 + " " + structure2 + " " + \
         phrase + " three-dimensional form 3d render painting fractal spirit"
 

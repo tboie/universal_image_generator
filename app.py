@@ -75,7 +75,7 @@ def run_script():
                                 "refuse pit", "cathedral"])
 
     key = "universal mystical magical place of"
-    key_desc = "epic ultimate ultra elite supreme unique technological archeological natural creatures living being musical architectural electrical monumental wisdom inspiration realistic imagination engineering instruments symbolism sculpture raw genius artistic energy motion emotional mechanical intellect"
+    key_desc = "epic ultimate ultra elite supreme unique technological advanced futuristic next-generation archeological archetypal natural creatures living being musical architectural electrical monumental wisdom inspiration realistic imagination engineering instruments symbolism sculpture raw genius artistic energy motion emotional wild mechanical intellect"
     key_desc = key_desc.split(" ")
     random.shuffle(key_desc)
     key = key + " " + " " .join(key_desc)

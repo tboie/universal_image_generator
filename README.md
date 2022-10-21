@@ -1,12 +1,9 @@
-# Timothy Boie's Universal AI App:
+# Universal Image Generator:
 
-- install stable diffusion from section below
-- install flask `pip install Flask`
+- `pip install -r requirements.txt`
 - run server with `flask run`
-
 - `app.py` is the server file and calls `demo.py` with prompt string as argument
 - `/templates/home.html` is the web file
-- make sure the fetch address in `home.html` matches that returned by `flask run`
 - image file saved to `/output/output.png`
 
 - EXTRA: image color pallete generation with imgColors.js (port to python to use?)

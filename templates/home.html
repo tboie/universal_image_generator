@@ -97,7 +97,7 @@
           const text = document
             .getElementById("textarea")
             .value.replace(/[^\w\s\-!?]/g, "");
-          const imageUrl = "http://127.0.0.1:5000/gen?phrase=" + text;
+          const imageUrl = "http://localhost:5000/gen?phrase=" + text;
 
           fetch(imageUrl)
             .then((response) => response.blob())

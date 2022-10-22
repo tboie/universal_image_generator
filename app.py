@@ -78,7 +78,7 @@ def run_script():
     key_desc = "epic ultimate ultra elite supreme unique technological mythological advanced futuristic archeological archetypal natural creatures living being musical architectural electrical monumental wisdom inspiration realistic imagination engineering instruments symbolism sculpture raw genius artistic energy motion emotional wild mechanical intellect"
     key_desc = key_desc.split(" ")
     random.shuffle(key_desc)
-    key = key + " " + " " .join(key_desc)
+    key = key + " " + " ".join(key_desc)
 
     forms = [geo, element, mineral, pattern, plant_species, plant_name,
              animal_species, animal, sea_species1, structure1, structure2]

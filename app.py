@@ -41,9 +41,12 @@ def run_script():
 
     geo = random.choice(landforms)
 
+    time = random.choice(["midnight", "midday", "noon", "morning", "afternoon", "evening",
+                         "night", "dawn", "dusk", "twilight", "sunrise", "sunup", "sunset", "daylight", "dark", "black", "bright"])
+
     element = random.choice(
-        ["water", "wood", "fire", "earth", "metal", "air", "wind", "sunlight", "glass", "fungus", "sponge", "laser", "plasma",
-         "lightning", "space", "astro", "cosmos", "lava", "smoke", "oceanic", "underwater", "deepsea", "aquatic", "ice", "snow", "frost", "gas", "fog", "mist", "icicles"])
+        ["water", "wood", "fire", "flame", "earth", "metal", "air", "wind", "sunlight", "glass", "laser", "plasma",
+         "lightning", "space", "astro", "cosmos", "lava", "smoke", "oceanic", "underwater", "deepsea", "aquatic", "ice", "snow", "frost", "gas", "fog", "mist", "hail", "blizzard", "storm", "rain", "icicles"])
 
     mineral = random.choice(minerals)
 
@@ -80,7 +83,7 @@ def run_script():
     random.shuffle(key_desc)
     key = key + " " + " ".join(key_desc)
 
-    forms = [geo, element, mineral, pattern, plant_species, plant_name,
+    forms = [geo, time, element, mineral, pattern, plant_species, plant_name,
              animal_species, animal, sea_species1, structure1, structure2]
     random.shuffle(forms)
 

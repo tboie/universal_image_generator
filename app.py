@@ -42,7 +42,7 @@ def run_script():
     geo = random.choice(landforms)
 
     element = random.choice(
-        ["water", "wood", "fire", "earth", "metal", "air", "wind", "sunlight", "glass", "fungus", "sponge", "laser",
+        ["water", "wood", "fire", "earth", "metal", "air", "wind", "sunlight", "glass", "fungus", "sponge", "laser", "plasma",
          "lightning", "space", "astro", "cosmos", "lava", "smoke", "oceanic", "underwater", "deepsea", "aquatic", "ice", "snow", "frost", "gas", "fog", "mist", "icicles"])
 
     mineral = random.choice(minerals)

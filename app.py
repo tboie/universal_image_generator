@@ -65,7 +65,7 @@ def run_script():
 
     animal = random.choice(animals)
 
-    sea_species1 = random.choice(sea_species)
+    # sea_species1 = random.choice(sea_species)
 
     structure1 = random.choice(["twin city", "megacity", "megalopolis", "smart city",
                                 "metro city", "garden city", "conurbation", "metropolis",
@@ -84,7 +84,7 @@ def run_script():
     key = key + " " + " ".join(key_desc)
 
     forms = [geo, time, element, mineral, pattern, plant_species, plant_name,
-             animal_species, animal, sea_species1, structure1, structure2]
+             animal_species, animal, structure1, structure2]
     random.shuffle(forms)
 
     process = "three-dimensional form 3d render painting fractal spirit"

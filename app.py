@@ -45,8 +45,8 @@ def run_script():
                          "night", "dawn", "dusk", "twilight", "sunrise", "sunup", "sunset", "daylight", "dark", "black", "bright"])
 
     element = random.choice(
-        ["water", "wood", "fire", "flame", "earth", "metal", "air", "wind", "sunlight", "glass", "laser", "plasma",
-         "lightning", "space", "astro", "cosmos", "lava", "smoke", "oceanic", "underwater", "deepsea", "aquatic", "ice", "snow", "frost", "gas", "fog", "mist", "clouds", "hail", "blizzard", "storm", "rain", "icicles"])
+        ["water", "wood", "fire", "flame", "earth", "metal", "air", "wind", "glass", "laser", "plasma",
+         "lightning", "space", "astro", "cosmos", "lava", "smoke", "oceanic", "underwater", "deepsea", "aquatic", "ice", "snow", "frost", "gas", "fog", "mist", "clouds", "hail", "blizzard", "storm", "rain", "icicles", "holograph"])
 
     mineral = random.choice(minerals)
 

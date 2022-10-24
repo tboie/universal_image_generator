@@ -1,7 +1,14 @@
 # Universal Image Generator:
 
+### `app.py` contains prompt Universal Prompt Formula
+
+## Install:
+
 - `pip install -r requirements.txt`
 - run server with `flask run`
+
+## Info:
+
 - `app.py` is the server file and calls `demo.py` with prompt string as argument
 - `/templates/home.html` is the web file
 - image file saved to `/output/output.png`

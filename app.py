@@ -1,5 +1,6 @@
 # Universal Prompt Formula
-# usage: flask run
+# usage:
+# /gen?phrase=[string]
 
 from flask import Flask, request, send_file, render_template
 import demo

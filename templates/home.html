@@ -96,7 +96,7 @@
           // only letters, spaces, numbers, question marks, exclamation marks, dashes
           const text = document
             .getElementById("textarea")
-            .value.replace(/[^\w\s\-!?]/g, "");
+            .value.replace(/[^\w\s\-!?,]/g, "");
           const imageUrl = "http://localhost:5000/gen?phrase=" + text;
 
           fetch(imageUrl)

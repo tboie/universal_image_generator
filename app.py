@@ -36,18 +36,22 @@ def home():
 @app.route('/gen')
 def run_script():
     phrase = str(request.args.get('phrase'))
-
-    if phrase is None:
+    print(phrase)
+    if phrase is None or phrase == "":
         phrase = ""
+    else:
+        phrase = ", " + phrase + ", "
 
     geo = random.choice(landforms)
 
     time = random.choice(["midnight", "midday", "noon", "morning", "afternoon", "evening",
                          "night", "dawn", "dusk", "twilight", "sunrise", "sunup", "sunset", "daylight", "dark", "black", "bright"])
 
-    element = random.choice(
-        ["water", "wood", "fire", "flame", "earth", "metal", "air", "wind", "glass", "laser", "plasma",
-         "lightning", "space", "astro", "cosmos", "lava", "smoke", "oceanic", "underwater", "deepsea", "aquatic", "ice", "snow", "frost", "gas", "fog", "mist", "clouds", "hail", "blizzard", "storm", "rain", "icicles", "holograph"])
+    element1 = random.choice(
+        ["water", "wood", "fire", "flame", "earth", "metal", "air", "wind", "glass", "laser", "plasma", "lava", "smoke", "oceanic", "underwater", "deepsea", "aquatic"])
+
+    element2 = random.choice(["lightning", "space", "astro", "cosmos", "ice", "snow", "frost",
+                             "gas", "fog", "mist", "clouds", "hail", "blizzard", "storm", "rain", "icicles", "holograph"])
 
     mineral = random.choice(minerals)
 
@@ -84,16 +88,17 @@ def run_script():
     random.shuffle(key_desc)
     key = key + " " + " ".join(key_desc)
 
-    forms = [geo, time, element, mineral, pattern, plant_species, plant_name,
+    forms = [geo, time, element1, element2, mineral, pattern, plant_species, plant_name,
              animal_species, animal, structure1, structure2]
     random.shuffle(forms)
 
     process = "three-dimensional form 3d render painting fractal spirit"
 
-    prompt = key + " " + " ".join(forms) + " " + phrase + " " + process
+    prompt = key + " " + " ".join(forms) + phrase + " " + process
 
-    # remove multiple spaces and remove commas
-    prompt = re.sub(" +", " ", prompt).replace(",", "").lower()
+    # remove multiple spaces and commas
+    prompt = re.sub(" +", " ", prompt).lower()
+    prompt = re.sub(",+", ",", prompt)
 
     print(prompt)
 

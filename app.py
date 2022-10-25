@@ -94,6 +94,7 @@ def run_script():
 
     process = "three-dimensional form 3d render painting fractal spirit"
 
+    # formula = adjectives + form + phrase(commas allowed) + process
     prompt = key + " " + " ".join(forms) + phrase + " " + process
 
     # remove multiple spaces and commas

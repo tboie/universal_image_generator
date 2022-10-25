@@ -1,6 +1,6 @@
 # Universal Image Generator:
 
-### `app.py` contains prompt Universal Prompt Formula
+### `app.py` contains Universal Prompt Formula
 
 ## Install:
 

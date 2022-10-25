@@ -39,7 +39,7 @@ def home():
 @app.route('/gen')
 def run_script():
     phrase = str(request.args.get('phrase'))
-    print(phrase)
+
     if phrase is None or phrase == "":
         phrase = ""
     else:
@@ -75,7 +75,11 @@ def run_script():
 
     animal = random.choice(animals)
 
-    # sea_species1 = random.choice(sea_species)
+    # 1 in 8 chance of sea species
+    if random.randint(1, 8) == 8:
+        sea_species = random.choice(sea_species)
+    else:
+        sea_species = ""
 
     structure1 = random.choice(["twin city", "megacity", "megalopolis", "smart city",
                                 "metro city", "garden city", "conurbation", "metropolis",
@@ -87,14 +91,14 @@ def run_script():
                                 "house", "religious building", "ritual building", "shrine", "tomb", "grave", "graveyard",
                                 "refuse pit", "cathedral"])
 
-    key = "universal mystical magical place of"
     key_desc = "epic ultimate ultra elite supreme unique technological mythological advanced futuristic archeological archetypal seasonal natural creatures living being musical architectural electrical monumental color wisdom inspiration realistic imagination engineering instruments symbolism sculpture raw genius artistic energy motion emotional wild mechanical intellect"
     key_desc = key_desc.split(" ")
     random.shuffle(key_desc)
-    key = key + " " + " ".join(key_desc)
+
+    key = "universal mystical magical place of " + " ".join(key_desc)
 
     forms = [land, geo, time, element1, element2, mineral, pattern, plant_species, plant_name,
-             animal_species, animal, structure1, structure2]
+             sea_species, animal_species, animal, structure1, structure2]
     random.shuffle(forms)
 
     process = "three-dimensional form 3d render painting fractal spirit"

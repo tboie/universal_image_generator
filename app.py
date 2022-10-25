@@ -18,6 +18,9 @@ landforms = json.load(f_landforms)
 f_minerals = open('json/minerals.json')
 minerals = json.load(f_minerals)
 
+f_rocks = open('json/rocks.json')
+rocks = json.load(f_rocks)
+
 f_sea_species = open('json/sea_species.json')
 sea_species = json.load(f_sea_species)
 
@@ -42,10 +45,12 @@ def run_script():
     else:
         phrase = ", " + phrase + ", "
 
-    geo = random.choice(landforms)
-
     time = random.choice(["midnight", "midday", "noon", "morning", "afternoon", "evening",
-                         "night", "dawn", "dusk", "twilight", "sunrise", "sunup", "sunset", "daylight", "dark", "black", "bright"])
+                          "night", "dawn", "dusk", "twilight", "sunrise", "sunup", "sunset", "daylight", "dark", "black", "bright"])
+
+    land = random.choice(landforms)
+
+    geo = random.choice(rocks)
 
     element1 = random.choice(
         ["water", "wood", "fire", "flame", "earth", "metal", "air", "wind", "glass", "laser", "plasma", "lava", "smoke", "oceanic", "underwater", "deepsea", "aquatic"])
@@ -88,7 +93,7 @@ def run_script():
     random.shuffle(key_desc)
     key = key + " " + " ".join(key_desc)
 
-    forms = [geo, time, element1, element2, mineral, pattern, plant_species, plant_name,
+    forms = [land, geo, time, element1, element2, mineral, pattern, plant_species, plant_name,
              animal_species, animal, structure1, structure2]
     random.shuffle(forms)
 

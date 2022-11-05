@@ -61,7 +61,7 @@ def run_script():
     else:
         sea_species = ""
 
-    key_desc = "epic ultimate ultra elite supreme unique technological mythological advanced futuristic archeological archetypal seasonal natural creatures living being musical architectural electrical monumental color wisdom inspiration realistic imagination engineering instruments symbolism sculpture raw genius artistic energy motion emotional wild mechanical intellect"
+    key_desc = "epic ultimate ultra elite supreme unique technological mythological advanced futuristic archaeological archetypal seasonal natural creatures living being musical architectural electrical monumental color wisdom inspiration realistic imagination engineering instruments symbolism sculpture raw genius artistic energy motion emotional wild mechanical intellectual"
     key_desc = key_desc.split(" ")
     random.shuffle(key_desc)
 

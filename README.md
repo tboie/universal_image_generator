@@ -1,6 +1,6 @@
 # Universal Image Generator:
 
-## [app.py contains Universal Prompt Formula](https://github.com/tboie/universal_image_generator/blob/master/app.py)
+### [app.py contains Universal Prompt Formula](https://github.com/tboie/universal_image_generator/blob/master/app.py)
 
 ### Install:
 
@@ -15,4 +15,4 @@
 
 - EXTRA: image color pallete generation with imgColors.js (port to python?)
 
-#### [uses Stable Diffusion CPU (I don't have GPU)](https://github.com/bes-dev/stable_diffusion.openvino)
+### [uses Stable Diffusion CPU (I don't have GPU)](https://github.com/bes-dev/stable_diffusion.openvino)

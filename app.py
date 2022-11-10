@@ -58,7 +58,7 @@ def run_script():
 
     # build prompt formula
     key = "universal mystical magical place of "
-    key_desc = "epic ultimate ultra elite supreme unique technological mythological advanced futuristic archaeological archetypal seasonal natural creatures living being musical architectural electrical monumental color wisdom inspiration realistic imagination engineering instruments symbolism sculpture genius artistic energy motion emotional mechanical intellectual"
+    key_desc = "epic ultimate ultra elite supreme unique technological mythological advanced futuristic archaeological archetypal seasonal natural creatures living being musical architectural electrical monumental wild color wisdom inspiration realistic imagination engineering instruments symbolism sculpture genius artistic energy motion emotional mechanical intellectual"
     key_desc = key_desc.split(" ")
     random.shuffle(key_desc)
 

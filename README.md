@@ -16,3 +16,10 @@
 - EXTRA: image color pallete generation with imgColors.js (port to python?)
 
 ### [uses Stable Diffusion CPU (I don't have GPU)](https://github.com/bes-dev/stable_diffusion.openvino)
+
+![example 1](https://github.com/tboie/universal_image_generator/tree/master/examples/1.png)
+![example 2](https://github.com/tboie/universal_image_generator/tree/master/examples/2.png)
+![example 2](https://github.com/tboie/universal_image_generator/tree/master/examples/3.png)
+![example 2](https://github.com/tboie/universal_image_generator/tree/master/examples/4.png)
+![example 2](https://github.com/tboie/universal_image_generator/tree/master/examples/5.png)
+![example 2](https://github.com/tboie/universal_image_generator/tree/master/examples/6.png)

@@ -76,7 +76,7 @@ def run_script():
         prompt = phrase + ", " + process
 
     # remove multiple spaces and commas
-    prompt = re.sub(" +", " ", prompt).lower()
+    prompt = re.sub(" +", " ", prompt)
     prompt = re.sub(",+", ",", prompt)
 
     print(prompt)

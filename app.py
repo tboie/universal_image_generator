@@ -72,8 +72,8 @@ def run_script():
         # formula = description + forms + process
         prompt = key + " " + " ".join(forms) + " " + process
     else:
-        # formula = phrase + process
-        prompt = phrase + ", " + process
+        # phrase only
+        prompt = phrase
 
     # remove multiple spaces and commas
     prompt = re.sub(" +", " ", prompt)

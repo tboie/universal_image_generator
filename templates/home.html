@@ -78,42 +78,38 @@
       <h1>Universal Image Generator</h1>
       <img id="image" src="/static/placeholder.png" />
       <span id="loading">Generating Image...</span>
-      <textarea
-        id="textarea"
-        placeholder="Maybe type something... (commas allowed)"
-      ></textarea>
+      <textarea id="textarea" placeholder="Optional: Custom Prompt"></textarea>
       <button id="btn">Meditate</button>
     </div>
 
     <script type="text/javascript">
       window.onload = function () {
         const btn = document.getElementById("btn");
+
         btn.addEventListener("click", (e) => {
           document.getElementById("loading").style.display = "block";
-          document.getElementById("btn").disabled = true;
           document.getElementById("textarea").disabled = true;
           document.getElementById("textarea").placeholder = "";
+          document.getElementById("btn").disabled = true;
           document.getElementById("btn").innerText = "Meditating";
           document.getElementById("image").src = "/static/placeholder.png";
 
-          // only letters, spaces, numbers, question marks, exclamation marks, dashes
-          const text = document
-            .getElementById("textarea")
-            .value.replace(/[^\w\s\-!?,]/g, "");
-          const imageUrl = "http://localhost:5000/gen?phrase=" + text;
+          const text = document.getElementById("textarea").value;
+          const imageUrl =
+            window.location.href + "/gen?phrase=" + encodeURIComponent(text);
 
           fetch(imageUrl)
             .then((response) => response.blob())
             .then((imageBlob) => {
               document.getElementById("loading").style.display = "none";
-              document.getElementById("btn").disabled = false;
               document.getElementById("textarea").disabled = false;
               document.getElementById("textarea").placeholder =
-                "Maybe type something... (commas allowed)";
+                "Optional: Custom Prompt";
               document.getElementById("textarea").value = "";
               document.getElementById("btn").disabled = false;
+              document.getElementById("btn").disabled = false;
               document.getElementById("btn").innerText = "Meditate";
-              document.querySelector("#image").src =
+              document.getElementById("image").src =
                 URL.createObjectURL(imageBlob);
             });
         });

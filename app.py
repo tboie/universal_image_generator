@@ -36,11 +36,6 @@ def home():
 def run_script():
     phrase = str(request.args.get('phrase'))
 
-    if phrase is None or phrase == "":
-        phrase = ""
-    else:
-        phrase = ", " + phrase + ", "
-
     time = random.choice(l_time)
     land = random.choice(l_landforms)
     geo = random.choice(l_rocks)
@@ -73,8 +68,12 @@ def run_script():
 
     process = "three-dimensional form 3d render painting fractal spirit"
 
-    # formula = adjectives + form + phrase(commas allowed) + process
-    prompt = key + " " + " ".join(forms) + phrase + " " + process
+    if phrase == "":
+        # formula = description + forms + process
+        prompt = key + " " + " ".join(forms) + " " + process
+    else:
+        # formula = phrase + process
+        prompt = phrase + ", " + process
 
     # remove multiple spaces and commas
     prompt = re.sub(" +", " ", prompt).lower()

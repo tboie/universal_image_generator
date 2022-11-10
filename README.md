@@ -19,7 +19,7 @@
 
 ![example 1](https://github.com/tboie/universal_image_generator/blob/master/examples/1.png?raw=true)
 ![example 2](https://github.com/tboie/universal_image_generator/tree/master/examples/2.png?raw=true)
-![example 2](https://github.com/tboie/universal_image_generator/tree/master/examples/3.png?raw=true)
-![example 2](https://github.com/tboie/universal_image_generator/tree/master/examples/4.png?raw=true)
-![example 2](https://github.com/tboie/universal_image_generator/tree/master/examples/5.png?raw=true)
-![example 2](https://github.com/tboie/universal_image_generator/tree/master/examples/6.png?raw=true)
+![example 3](https://github.com/tboie/universal_image_generator/tree/master/examples/3.png?raw=true)
+![example 4](https://github.com/tboie/universal_image_generator/tree/master/examples/4.png?raw=true)
+![example 5](https://github.com/tboie/universal_image_generator/tree/master/examples/5.png?raw=true)
+![example 6](https://github.com/tboie/universal_image_generator/tree/master/examples/6.png?raw=true)

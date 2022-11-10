@@ -56,18 +56,23 @@ def run_script():
     else:
         sea_species = ""
 
+    # build prompt formula
+    key = "universal mystical magical place of "
     key_desc = "epic ultimate ultra elite supreme unique technological mythological advanced futuristic archaeological archetypal seasonal natural creatures living being musical architectural electrical monumental color wisdom inspiration realistic imagination engineering instruments symbolism sculpture raw genius artistic energy motion emotional wild mechanical intellectual"
     key_desc = key_desc.split(" ")
     random.shuffle(key_desc)
 
-    key = "universal mystical magical place of " + " ".join(key_desc)
+    key = key + " ".join(key_desc)
 
+    # forms
     forms = [land, geo, time, element1, element2, mineral, pattern, plant_species, plant_name,
              sea_species, animal_species, animal, structure1, structure2]
     random.shuffle(forms)
 
+    # process
     process = "three-dimensional form 3d render painting fractal spirit"
 
+    # build prompt
     if phrase == "":
         # formula = description + forms + process
         prompt = key + " " + " ".join(forms) + " " + process

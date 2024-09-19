@@ -1,6 +1,6 @@
 # Universal Image Generator:
 
-- Are there base forms of geometry from the process of everything?
+- What patterns emerge from the perspectives of the most ultimate vocabulary of everything?
 
 ### [app.py contains Universal Prompt Formula](https://github.com/tboie/universal_image_generator/blob/master/app.py)
 

@@ -1,6 +1,6 @@
 # Universal Image Generator:
 
-- What patterns emerge from the perspectives of the most ultimate vocabulary of everything?
+- What patterns emerge from the perspectives of the most ultimate vocabulary of everything living?
 
 ### [app.py contains Universal Prompt Formula](https://github.com/tboie/universal_image_generator/blob/master/app.py)
 

@@ -1,5 +1,7 @@
 # Universal Image Generator:
 
+- Are there base forms of geometry from the process itself?
+
 ### [app.py contains Universal Prompt Formula](https://github.com/tboie/universal_image_generator/blob/master/app.py)
 
 ### Install:
